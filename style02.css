@@ -1,0 +1,404 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    height: 100vh; 
+}
+
+.grid-item {
+    border: 1px solid red;
+    box-sizing: border-box;
+    text-align: center;
+    content-visibility: hidden;
+    
+}
+
+.grid-item.clicked {
+    content-visibility: visible;
+    background-color: rgb(148, 148, 220);
+    animation: successAnimation 0.5s;
+    
+}
+
+.grid-item.explosion {
+    background-color: red;
+    content-visibility: visible;
+    animation: explosionAnimation 0.5s;
+}
+
+@keyframes successAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes explosionAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.8);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+#idno010.clicked, #idno015.clicked, #idno030.clicked, #idno068.clicked, #idno032.clicked, #idno100.clicked {
+    background-color: red;
+}
+
+#idno055.clicked {
+    background-color: rgb(80, 195, 80);
+}
+
+
+
+
+
+
+/* body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    height: 100vh; 
+}
+
+.grid-item {
+    border: 1px solid red;
+    box-sizing: border-box;
+    text-align: center;
+}
+#idno001{content-visibility: hidden;}
+#idno001.clicked
+{    background-color: rgb(148, 148, 220);content-visibility: visible;}
+
+#idno002{content-visibility: hidden;}
+#idno002.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno003{content-visibility: hidden;}
+#idno003.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno004{content-visibility: hidden;}
+#idno004.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno005{content-visibility: hidden;}
+#idno005.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno006{content-visibility: hidden;}
+#idno006.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno007{content-visibility: hidden;}
+#idno007.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno008{content-visibility: hidden;}
+#idno008.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno009{content-visibility: hidden;}
+#idno009.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+
+
+#idno010{content-visibility:hidden;}
+#idno010.clicked{background-color: red;content-visibility:visible;}
+
+#idno011{content-visibility: hidden;}
+#idno011.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno012{content-visibility: hidden;}
+#idno012.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno013{content-visibility: hidden;}
+#idno013.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno014{content-visibility: hidden;}
+#idno014.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+
+
+#idno015{content-visibility:hidden;}
+#idno015.clicked{background-color: red;content-visibility:visible;}
+
+#idno016{content-visibility: hidden;}
+#idno016.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno017{content-visibility: hidden;}
+#idno017.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno018{content-visibility: hidden;}
+#idno018.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno019{content-visibility: hidden;}
+#idno019.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno020{content-visibility: hidden;}
+#idno020.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno021{content-visibility: hidden;}
+#idno021.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno022{content-visibility: hidden;}
+#idno022.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno023{content-visibility: hidden;}
+#idno023.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno024{content-visibility: hidden;}
+#idno024.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno025{content-visibility: hidden;}
+#idno025.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno026{content-visibility: hidden;}
+#idno026.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno027{content-visibility: hidden;}
+#idno027.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno028{content-visibility: hidden;}
+#idno028.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno029{content-visibility: hidden;}
+#idno029.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+
+#idno030{content-visibility:hidden;}
+#idno030.clicked{background-color: red;content-visibility:visible;}
+
+#idno031{content-visibility: hidden;}
+#idno031.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+
+#idno032{content-visibility:hidden;}
+#idno032.clicked{background-color: red;content-visibility:visible;}
+
+#idno033{content-visibility: hidden;}
+#idno033.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno034{content-visibility: hidden;}
+#idno034.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno035{content-visibility: hidden;}
+#idno035.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno036{content-visibility: hidden;}
+#idno036.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno037{content-visibility: hidden;}
+#idno037.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno038{content-visibility: hidden;}
+#idno038.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno039{content-visibility: hidden;}
+#idno039.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno040{content-visibility: hidden;}
+#idno040.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+
+#idno041{content-visibility: hidden;}
+#idno041.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno042{content-visibility: hidden;}
+#idno042.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno043{content-visibility: hidden;}
+#idno043.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno044{content-visibility: hidden;}
+#idno044.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno045{content-visibility: hidden;}
+#idno045.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno046{content-visibility: hidden;}
+#idno046.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno047{content-visibility: hidden;}
+#idno047.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno048{content-visibility: hidden;}
+#idno048.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+
+#idno049{content-visibility: hidden;}
+#idno049.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno050{content-visibility: hidden;}
+#idno050.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno051{content-visibility: hidden;}
+#idno051.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno052{content-visibility: hidden;}
+#idno052.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno053{content-visibility: hidden;}
+#idno053.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno054{content-visibility: hidden;}
+#idno054.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+
+#idno055{content-visibility:hidden;}
+#idno055.clicked{background-color: rgb(80, 195, 80);content-visibility:visible;text-align: center;}
+
+
+#idno056{content-visibility: hidden;}
+#idno056.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno057{content-visibility: hidden;}
+#idno057.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno058{content-visibility: hidden;}
+#idno058.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno059{content-visibility: hidden;}
+#idno059.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno060{content-visibility: hidden;}
+#idno060.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno061{content-visibility: hidden;}
+#idno061.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno062{content-visibility: hidden;}
+#idno062.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno063{content-visibility: hidden;}
+#idno063.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno064{content-visibility: hidden;}
+#idno064.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno065{content-visibility: hidden;}
+#idno065.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno066{content-visibility: hidden;}
+#idno066.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno067{content-visibility: hidden;}
+#idno067.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+
+#idno068{content-visibility:hidden;}
+#idno068.clicked{background-color: red;content-visibility:visible;}
+
+#idno069{content-visibility: hidden;}
+#idno069.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno070{content-visibility: hidden;}
+#idno070.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno071{content-visibility: hidden;}
+#idno071.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno072{content-visibility: hidden;}
+#idno072.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno073{content-visibility: hidden;}
+#idno073.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno074{content-visibility: hidden;}
+#idno074.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno075{content-visibility: hidden;}
+#idno075.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno076{content-visibility: hidden;}
+#idno076.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno077{content-visibility: hidden;}
+#idno077.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno078{content-visibility: hidden;}
+#idno078.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno079{content-visibility: hidden;}
+#idno079.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno080{content-visibility: hidden;}
+#idno080.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno081{content-visibility: hidden;}
+#idno081.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno082{content-visibility: hidden;}
+#idno082.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno083{content-visibility: hidden;}
+#idno083.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno084{content-visibility: hidden;}
+#idno084.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno085{content-visibility: hidden;}
+#idno085.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno086{content-visibility: hidden;}
+#idno086.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno087{content-visibility: hidden;}
+#idno087.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno088{content-visibility: hidden;}
+#idno088.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno089{content-visibility: hidden;}
+#idno089.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno090{content-visibility: hidden;}
+#idno090.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno091{content-visibility: hidden;}
+#idno091.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno092{content-visibility: hidden;}
+#idno092.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno093{content-visibility: hidden;}
+#idno093.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno094{content-visibility: hidden;}
+#idno094.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno095{content-visibility: hidden;}
+#idno095.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno096{content-visibility: hidden;}
+#idno096.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno097{content-visibility: hidden;}
+#idno097.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno098{content-visibility: hidden;}
+#idno098.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+#idno099{content-visibility: hidden;}
+#idno099.clicked
+{content-visibility: visible;background-color: rgb(148, 148, 220);}
+
+#idno100{content-visibility:hidden;}
+#idno100.clicked{background-color: red;content-visibility:visible;} */
